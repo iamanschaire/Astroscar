@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/f47b014f3a597db475c47669fab024e0?family=CaslonGraD+V2");
+html {
+  font-size: calc(60% + 0.8vmin);
+}
+body {
+  margin: 0;
+  background-color: #030303;
+  letter-spacing: 0.09375rem;
+  width: 100%;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: white; 
+  border-radius: 20px; 
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+header {
+  background-color: #030303;
+  color: #fff;
+  padding: 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.9375rem;
+  width: 100%;
+}
+#toggle {
+  display: none;
+}
+.hamburger {
+  position: absolute;
+  top: 4.25rem;
+  right: 95%;
+  margin-left: -1.25rem;
+  margin-top: -2.8125rem;
+  width: 1.25rem;
+  height: 2.8125rem;
+  z-index: 5;
+}
+.hamburger div {
+  position: relative;
+  width: 2.1875rem;
+  height: 0.25rem;
+  border-radius: 0.1875rem;
+  background-color: #ffffff;
+  margin-top: 0.5rem;
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #4d48af;
+  opacity: 0.99;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform: scale(0);
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  right: 10.625rem;
+}
+.fontAwesome {
+  font-family: Helvetica, "FontAwesome", sans-serif;
+  background-color: #4d48af;
+  color: white;
+  border-radius: 2rem;
+  border-style: solid 0.03125rem;
+  border-color: white;
+  width: 60rem;
+  line-height: 2.5rem;
+  margin-left: 3.5rem;
+  margin-top: 1rem;
+}
+.fontAwesome:active {
+  border-radius: 2rem;
+}
+table {
+  margin-left: 50px;
+  text-align: justify;
+  font-size: 0.75rem;
+  width: 100%;
+  font-family: "khand", serif;
+}
+.rows {
+  height: 1.875rem;
+}
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2em;
+  display: inline-block;
+  margin-top: 1.25em;
+  letter-spacing: 0.0625rem;
+}
+nav a:before {
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0.25em;
+  background-color: white;
+  left: -0.5em;
+}
+nav a:hover {
+  color: white;
+}
+nav a:hover:before {
+  height: 100%;
+}
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 1.5625rem;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -0.25rem;
+}
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+  z-index: 2;
+}
+#icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 1.75rem;
+  margin-left: 9.375rem;
+  font-family: "khand", serif;
+}
+.sign-in {
+  font-size: 1.25rem;
+  margin-right: 3.125rem;
+  font-family: "khand", serif;
+}
+.navbar {
+  background-color: #030303;
+  height: 0rem;
+  text-align: center;
+  margin-top: 0rem;
+  word-spacing: 1.25rem;
+  border-top-style: solid;
+  border-color: white;
+  border-width: 0.0625rem;
+}
+.navbar p a {
+  line-height: 1.375rem;
+  color: white;
+  text-decoration: none;
+  font-family: "khand", serif;
+  font-size: 1.125rem;
+}
+.navbar p a:hover {
+  color: #4d48af;
+  text-decoration: none;
+}
+.main {
+  background-image: url(background.png);
+  background-position-x: center;
+  background-position-y: top;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  text-align: center;
+  margin-top: 4.375rem;
+  color: white;
+  font-family: "CaslonGraD V2";
+}
+.background {
+  position: static;
+  height: 25rem;
+}
+.background .page-intro h2 {
+  line-height: 3.125rem;
+  font-size: 1.625rem;
+}
+.background .page-intro p {
+  font-family: "merriweather", serif;
+  color: #bababa;
+  font-size: 1rem;
+}
+.buttons {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.button {
+  margin: 0.25rem;
+  font-family: "khand", serif;
+  width: 14.375rem;
+  height: 5.375rem;
+  border-style: solid;
+  border-color: #181b28;
+  border-radius: 0.3125rem;
+  background-color: #181b28;
+  cursor: pointer;
+  font-size: 1.375rem;
+}
+.button span {
+  margin-left: 1.25rem;
+  font-size: 1.875rem;
+}
+.button:hover {
+  background-color: rgb(19, 21, 32);
+}
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button-d {
+  padding-bottom: 0rem;
+  margin: 0.25rem;
+  font-family: "khand", serif;
+  width: 9.375rem;
+  height: 5.375rem;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0.625rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.375rem;
+  text-align: left;
+}
+.button-d:hover {
+  background-color: transparent;
+}
+.button-d a {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+.img2 {
+  position: relative;
+  right: 0rem;
+  top: 0rem;
+  margin-bottom: -2.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.march {
+  font-size: 0.625rem;
+  line-height: 0.0625rem;
+}
+.free {
+  background-color: #9281ca;
+  width: 20.3125rem;
+  border-radius: 0.625rem;
+  border-style: solid;
+  border-color: #9281ca;
+  cursor: pointer;
+  margin-left: 0.125rem;
+  color: black;
+}
+.free h4 {
+  font-family: "CaslonGraD V2";
+  font-size: 1.125rem;
+  color: black;
+}
+.free p {
+  font-family: "merriweather";
+  font-size: 0.6875rem;
+  color: black;
+}
+.free1 h4 {
+  font-family: "CaslonGraD V2";
+  font-size: 1.125rem;
+  color: black;
+}
+.free1 p {
+  font-family: "merriweather";
+  font-size: 0.6875rem;
+  color: black;
+}
+.free1 {
+  background-color: #6f4d98;
+  width: 21.875rem;
+  border-radius: 0.625rem;
+  border-style: solid;
+  border-color: #6f4d98;
+  cursor: pointer;
+  margin-left: 0.1875rem;
+}
+.free a {
+  text-decoration: none;
+}
+.free a:visited {
+  text-decoration: none;
+  color: black;
+}
+.free1 a {
+  text-decoration: none;
+}
+.free1 a:visited {
+  text-decoration: none;
+  color: black;
+}
+.img {
+  float: left;
+}
+.horoscopes {
+  margin-top: 12.5rem;
+}
+.opis {
+  font-family: "merriweather", serif;
+  color: #bababa;
+  font-size: 1rem;
+}
+.button2 {
+  margin: 0.25rem;
+  font-family: "khand", serif;
+  width: 18.75rem;
+  height: 8.125rem;
+  border-style: solid;
+  border-color: #181b28;
+  background-color: #181b28;
+  cursor: pointer;
+  font-size: 1.375rem;
+  font-family: "khand";
+  text-align: left;
+}
+.button2 a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  line-height: 1.13;
+}
+.wiecej {
+  font-size: 1rem;
+  margin-left: 1.25rem;
+  color: white;
+}
+.buttons-t {
+  margin-top: 0.625rem;
+  margin-bottom: 2.1875rem;
+  margin-right: 22.875rem;
+}
+.button-t {
+  height: 11.25rem;
+  float: left;
+  margin-left: 22.875rem;
+  background: -moz-linear-gradient(
+    228deg,
+    #b000b2 8%,
+    #b000b2 8%,
+    #54097f 114%
+  );
+  background: -webkit-linear-gradient(
+    228deg,
+    #b000b2 8%,
+    #b000b2 8%,
+    #54097f 114%
+  );
+  background: linear-gradient(228deg, #b000b2 8%, #b000b2 8%, #54097f 114%);
+  cursor: pointer;
+  font-size: 1.375rem;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+.button-t a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "CaslonGraD V2";
+  font-size: 1.25rem;
+  margin-top: 0rem;
+  margin-left: 0.5rem;
+}
+.buttons-c {
+  margin-top: 0.625rem;
+  margin-bottom: 2.1875rem;
+  margin-left: 22.05rem;
+}
+.button-c {
+  height: 11.25rem;
+  float: right;
+  margin-right: 24.0125rem;
+  background: -moz-linear-gradient(
+    228deg,
+    rgb(59, 87, 201) 8%,
+    rgb(59, 87, 201) 8%,
+    rgb(106, 130, 223) 114%
+  );
+  background: -webkit-linear-gradient(
+    228deg,
+    rgb(59, 87, 201) 8%,
+    rgb(59, 87, 201) 8%,
+    rgb(106, 130, 223) 114%
+  );
+  background: linear-gradient(
+    228deg,
+    rgb(59, 87, 201) 8%,
+    rgb(59, 87, 201) 8%,
+    rgb(106, 130, 223) 114%
+  );
+  cursor: pointer;
+  font-size: 1.375rem;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+.button-c a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "CaslonGraD V2";
+  font-size: 1.25rem;
+  margin-bottom: 0.125rem;
+  margin-right: 0.5rem;
+}
+.button-c .coming {
+  font-size: 0.625rem;
+  font-family: "merriweather", serif;
+  color: #bababa;
+  margin-left: 5rem;
+  margin-top: 0.3125rem;
+}
+.compatibility p {
+  font-family: "merriweather", serif;
+  color: #bababa;
+  font-size: 1rem;
+}
+.buttons-c .button {
+  font-family: "khand", serif;
+  width: 13.625rem;
+  height: 5.375rem;
+  border-style: solid;
+  border-color: #181b28;
+  background-color: #181b28;
+  cursor: pointer;
+  font-size: 1.375rem;
+  font-family: "khand";
+  text-align: center;
+}
+.buttons-c .button a {
+  color: white;
+  text-decoration: none;
+  margin-left: 0rem;
+  line-height: 1.13;
+  padding-top: 0.125rem;
+}
+.membership {
+  background-image: url(banner.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 26.875rem;
+  text-align: center;
+}
+.idk {
+  position: relative;
+  top: 4.0625rem;
+}
+.membership h2 {
+  font-size: 2.5rem;
+}
+.membership p {
+  color: #bababa;
+  font-family: "merriweather", serif;
+  font-size: 0.875rem;
+}
+.newsletter {
+  float: left;
+  display: inline;
+  margin-top: 2.25rem;
+  height: 12.5rem;
+}
+.newsletter {
+  font-size: 0.75rem;
+  margin-left: 15%;
+}
+.form {
+  position: relative;
+  bottom: 5.825rem;
+  left: 38.375rem;
+}
+input::placeholder {
+  color: white;
+}
+.newsletter input {
+  border-color: #f6cc6d;
+  border-width: 0.1875rem;
+  border-style: solid;
+  border-radius: 0.3125rem;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "khand";
+  height: 2.5rem;
+  width: 10.875rem;
+}
+.newsletter select {
+  border-color: #f6cc6d;
+  border-width: 0.1875rem;
+  border-style: solid;
+  border-radius: 0.3125rem;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "khand";
+  height: 2.5rem;
+  width: 10.875rem;
+}
+.container {
+  clear: both;
+  text-align: center;
+  list-style-type: none;
+  word-spacing: 0.9375rem;
+  height: 3.125rem;
+}
+.fa-brands {
+  margin-right: 0.5rem;
+}
+.footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -1.25rem;
+  height: 1.375rem;
+  position: relative;
+}
+.copyright{
+  text-align: center;
+  margin-top: 2px;
+}

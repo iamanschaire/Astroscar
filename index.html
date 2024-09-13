@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology</title>
+    <script src="https://kit.fontawesome.com/a96b48c393.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main-converted.css">
+</head>
+<body>
+        <header>
+            <input id="toggle" type="checkbox"></input>
+            <label for="toggle" class="hamburger">
+              <div class="top-bun"></div>
+              <div class="meat"></div>
+              <div class="bottom-bun"></div>
+            </label>
+            
+            <div class="nav">
+              <div class="nav-wrapper">
+                <nav>
+                  <ol>
+                   <input type="search" class="fontAwesome" placeholder="&#xf002" value="Search..."/></a></li>
+                   <table>
+                    <tr class="rows">
+                      <th><li><a href="#">HOROSCOPES</a></li></th>
+                      <th><li><a href="#">LEARN</a></li></th>
+                      <th><li><a href="#">COMPATIBILITY</a></li></th>
+                      <th><li><a href="#">TAROT</a></li></th>
+                      <th><li><a href="#">SHOP</a></li></th>
+                    </tr>
+                    <tr>
+                      <td><li><a href="#">Daily</a></li></td>
+                      <td><li><a href="#">Zodiac Signs</a></li></td>
+                      <td><li><a href="#">Love</a></li></td>
+                      <td><li><a href="#">Daily</a></li></td>
+                      <td><li><a href="#">Astrology</a></li></td>
+                    </tr><tr>
+                      <td><li><a href="#">Weekly</a></li></td>
+                      <td><li><a href="#">Planets</a></li></td>
+                      <td><li><a href="#">Friendship</a></li></td>
+                      <td><li><a href="#">Weekly</a></li></td>
+                      <td><li><a href="#">Tarot</a></li></td>
+                    </tr><tr>
+                      <td><li><a href="#">Monthly</a></li></td>
+                      <td><li><a href="#">Aspects</a></li></td>
+                      <td><li><a href="#">Work</a></li></td>
+                      <td><li><a href="#">Monthly</a></li></td>
+                      <td><li><a href="#">Charts</a></li></td>
+                    </tr><tr>
+                      <td><li><a href="#">Yearly</a></li></td>
+                      <td><li><a href="#">Houses</a></li></td>
+                      <td><li><a href="#"></a></li></td>
+                      <td><li><a href="#">Yearly</a></li></td>
+                      <td><li><a href="#">Interpretations</a></li></td>
+                    </tr>
+                   </table>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+        </div>
+        <div class="logo"><b>Astrology</b>.com</div>
+        <div id="contain_moon" style="padding-top:0.3125rem;padding-bottom:0.3125rem; font-size: 8px; text-align: center; margin-top: 15px; color: black; margin-right: 160px;">
+          <div style="font-weight:bold">Moon Phase</div>
+          <div style="margin-top: -0.4375rem; margin-bottom: -0.9375rem; padding: 0.875rem; filter: drop-shadow(rgb(0, 26, 77) 0px 0px 1.875rem); clip: rect(100px, 0px, 0px, 0px); height: 0.25rem;"></div>
+          <div>.</div>
+          <div style="font-size:small; "></div></div>
+          <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=75&lightColor=rgb(245,245,245)&shadeColor=rgb(41,41,41)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";m[1].style.height="6.25rem";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);m[2].innerHTML=b.phase[d].npWidget}};a.open("GET",url,true);a.send()})()</script>
+        </div>
+        <div class="sign-in"><a href="./php/index.php">Sign In</a></div>
+        
+      </header>
+        <div class="navbar">
+          <p>
+            <a href="#">HOROSCOPES</a>
+            <a href="#">LEARN</a>
+            <a href="#">COMPATIBILITY</a>
+            <a href="#">TAROT</a>
+            <a href="#">SHOP</a>
+          </p>
+        </div>
+        <main class="main">
+          <div class="background"> 
+            <div class="page-intro">
+              <h2 class="main-subtitle">WELCOME TO ASTROLOGY.COM</h2>
+              <p>Learn about astrology, zodiac signs, retrogrades, and more! Your world becomes<br> clear once you understand how the universe influences it.</p>
+            </div> 
+              <div class="buttons">
+                <img src=latestarticles1.webp class="img2" style="width: 5.375rem;">
+                <button class="button-d"><a href="#">Latest Article <br><p class="march">March 10th: Horosc...</p></a></button>
+                <button class="button"><a href="#">Zodiac Signs <span>♌︎</span></a></button>
+                <button class="button"><a href="#">Chinese Signs <span>图</span></a></button><br>
+                <img src=latestarticles2.webp class="img2" style="width: 5.375rem;">
+                <button class="button-d"><a href="#">Latest Article <br><p class="march">March 9th: Cancer...</p></a></button>
+                <button class="button"><a href="#">Planets <span>☿</span></a></button>
+                <button class="button"><a href="#">Houses <span><i class="fa-regular fa-sun" style="color: #ffffff;"></i></span></a></button>
+              </div>
+              <div>
+                <button class="free">
+                  <a href="./natal-chart-main/index.html">
+                  <img src="bc-wheel.png" style="width: 8.75rem; height: 8.75rem;" class="img">
+                  <h4>Free Birth Chart</h4>
+                  <p><i>Discover the key to your <br>life path & personality</i></p>
+                  </a>
+                </button>
+                <button class="free1">
+                  <a href="./dugo-tarot-card-picker-master/index.html">
+                  <img src="tarotki.png" style="width: 8.75rem; height: 8.75rem;" class="img">
+                  <h4>Tarot Reading</h4>
+                  <p><i>Get an answer with <br>actionable advice!</i></p>
+                </a>
+                </button>
+              </div>
+          </div>
+          <div class="horoscopes">
+              <h2>Horoscopes</h2>
+              <p class="opis">Unpack the mysteries of the universe with our horoscopes! Our cosmic guidance will <br>help you prepare for what's to come.</p>
+              <div class="buttons">
+                <button class="button2" style="background-color: #586181; color:white;"><a href="#">Daily Horoscopes <br><p class="wiecej">Read More → <img src="month.png" style="position: absolute; width: 6.25rem; height: 6.25rem; margin-left: 5.625rem; bottom: -15.5rem;"></p></a></button>
+                <button class="button2" style="background-color: #f16ea1; color:white;"><a href="#">Love Horoscopes <br><p class="wiecej">Read More → <img src="love.png" style="position: absolute; width: 6.25rem; height: 6.25rem; margin-left: 5.625rem; bottom: -15.125rem;"></p></a></button>
+                <button class="button2" style="background-color: #48c6af; color:white;"><a href="#">Work Horoscopes <br><p class="wiecej">Read More → <img src="work.png" style="position: absolute; width: 6.25rem; height: 6.25rem; margin-left: 5.625rem; bottom: -15.125rem;"></p></a></button><br>
+                <button class="button2" style="background-color: #3393b0; color:white;"><a href="#">Monthly Horoscopes <br><p class="wiecej">Read More →<img src="month.png" style="position: absolute; width: 6.25rem; height: 6.25rem; margin-left: 5.625rem; bottom: -24.25rem;"></p></a></button>
+                <button class="button2" style="background-color: #4d48af; color:white;"><a href="#">Weekly Horoscopes <br><p class="wiecej">Read More → <img src="month.png" style="position: absolute; width: 6.25rem; height: 6.25rem; margin-left: 5.625rem; bottom: -24.25rem;"></p></a></button>
+                <button class="button2" style="background-color: #9980f1; color:white;"><a href="#">Dating Horoscopes <br><p class="wiecej">Read More → <img src="dating.png" style="position: absolute; width: 5rem; height: 5rem; margin-left: 5.625rem; bottom: -24.25rem;"></p></a></button><br>
+                <button class="button2" style="background-color: #d15266; color:white;"><a href="#">Chinese Horoscopes <br><p class="wiecej">Read More →<img src="chinese.png" style="position: absolute; width: 5rem; height: 5rem; margin-left: 6.25rem; bottom: -31.75rem;"></p></a></button>
+                <button class="button2" style="background-color: #30385b; color:white;"><a href="#">Yearly Horoscopes <br><p class="wiecej">Read More →<img src="month.png" style="position: absolute; width: 6.25rem; height: 6.25rem; margin-left: 5.625rem; bottom: -32.775rem;"></p></a></button>
+              </div>
+           </div>
+          <div class="tarot">
+              <h2>Explore More Tarot</h2>
+              <p class="opis">Unveil the meaning behind your past, present, and future with a Tarot reading.</p>
+              <button class="button-t">
+              <a href="#" style="float: left;">Get your <br>tarot reading <br>now with card <br>interpretation</a>
+              <img src="tarocik.png" style="width: 6.25rem; height: 6.25rem;"></button>
+              <div class="buttons-t">
+                <button class="button"><a href="#">Daily Love Tarot</a></button>
+                <button class="button"><a href="#">Daily Tarot</a></button><br>
+                <button class="button"><a href="#">Daily Career Tarot</a></button>
+                <button class="button"><a href="#">Daily Flirt Tarot</a></button>
+              </div>
+            </div>
+          <div class="compatibility">
+              <h2>Compatibility</h2>
+              <p>Test your compatibility and find out how your love and work relationships rank with your partner, colleagues, friends and family.</p>
+                <div class="buttons-c">
+                  <button class="button"><a href="#">Work Compatibility</a></button>
+                  <button class="button"><a href="#">Zodiac Women Traits</a></button>
+                  <button class="button-c">
+                  <a href="#" style="float: right;">Get your <br>compatibility <br>now with our <br>AI astrologer</a>
+                  <img src="two-hearts.png" style="width: 8rem; height: 5rem;">
+                </button><br>
+                  <button class="button"><a href="#">Chinese Compatibility <br></a></button>
+                  <button class="button"><a href="#">Zodiac Men Traits</a></button>
+                </div>
+            </div>
+  
+          <div class="membership">
+            <div class="idk">
+              <h2>Your Customized Cosmic <br>Membership</h2>
+              <p>Daily, weekly, monthly, and yearly personalized astrological guidance at your <br>fingertips.</p>
+            </div>
+          </div>
+  
+          <div class="newsletter">
+            <div><h2>Join Our Daily Overview Newsletter!</h2>
+              <p>Your astrological overview guides you<br> on what to look out for <br>and how to act in tune with the stars and planets each day.</p>
+            <form action="./php/newsletter.php" method="post" class="form">
+              <input type="text" class="name" placeholder="Insert your name" style="width: 16.3125rem;">
+              <input type="date" class="date" style="width: 16.3125rem; margin-bottom: 0.25rem; color-scheme: dark;"><br>
+              <select value="Country...">
+                <option>Poland</option>
+                <option>USA</option>
+                <option>United Kingdom</option>
+              </select>
+              <input type="text" class="email" placeholder="Insert your email" style="height: 2.125rem;;">
+              <input type="submit" class="submit" value="Submit"style="margin: 0rem; cursor: pointer;">
+            </form>
+          </div>
+            </div>
+        </main>
+        <div class="contact" id="contact">
+          <div class="container">
+              <a href="https://www.facebook.com/oskar.boski.12/"><i class="fa-brands fa-facebook"></i>FACEBOOK</a>
+              <a href="https://www.instagram.com/iamanschaire"><i class="fa-brands fa-instagram"></i>INSTAGRAM</a>
+              <a href="https://www.tiktok.com/@iamanschaire"><i class="fa-brands fa-tiktok"></i>TIKTOK</a>
+              </div>
+        </div>
+        <div class="footer">
+          <div class="copyright">
+            <p class="animate___animated
+            animate_fadeIn
+            animate_infinite">© Oskar Stromczyński</p>
+          </div>
+        </div>
+</html>

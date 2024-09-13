@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/f47b014f3a597db475c47669fab024e0?family=CaslonGraD+V2");
+body {
+  margin: 0;
+  background-color: #030303;
+  letter-spacing: 1.5px;
+  width: 100%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+header {
+  background-color: #030303;
+  color: #fff;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+}
+#toggle {
+  display: none;
+}
+.hamburger {
+  position: absolute;
+  top: 68px;
+  right: 95%;
+  margin-left: -20px;
+  margin-top: -45px;
+  width: 20px;
+  height: 45px;
+  z-index: 5;
+}
+.hamburger div {
+  position: relative;
+  width: 35px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #4d48af;
+  opacity: 0.99;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform: scale(0);
+}
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  width: 90%;
+  left: -250px;
+}
+.fontAwesome {
+  font-family: Helvetica, "FontAwesome", sans-serif;
+  background-color: #4d48af;
+  color: white;
+  border-radius: 0px;
+  border-style: solid 0.5px;
+  border-color: white;
+  width: 960px;
+  line-height: 40px;
+}
+.fontAwesome:active {
+  border-radius: 0px;
+}
+table {
+  text-align: justify;
+  font-size: 12px;
+  width: 100%;
+  font-family: "khand", serif;
+}
+.rows {
+  height: 30px;
+}
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2em;
+  display: inline-block;
+  margin-top: 1.25em;
+  letter-spacing: 1px;
+}
+nav a:before {
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0.25em;
+  background-color: white;
+  left: -0.5em;
+}
+nav a:hover {
+  color: white;
+}
+nav a:hover:before {
+  height: 100%;
+}
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+#toggle:checked + .hamburger .bottom-bun {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+#toggle:checked + .hamburger .meat {
+  transform: rotate(45deg);
+  margin-top: -4px;
+}
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+  z-index: 2;
+}
+#icon {
+  color: white;
+  font-size: 24px;
+}
+
+.logo {
+  font-size: 28px;
+  margin-left: 150px;
+  font-family: "khand", serif;
+}
+.sign-in {
+  font-size: 20px;
+  margin-right: 50px;
+  font-family: "khand", serif;
+}
+.navbar {
+  background-color: #030303;
+  height: 0px;
+  text-align: center;
+  margin-top: 0px;
+  word-spacing: 20px;
+  border-top-style: solid;
+  border-color: white;
+  border-width: 1px;
+}
+.navbar p a {
+  line-height: 22px;
+  color: white;
+  text-decoration: none;
+  font-family: "khand", serif;
+  font-size: 18px;
+}
+.navbar p a:hover {
+  color: #4d48af;
+  text-decoration: none;
+}
+.main {
+  background-image: url(background.png);
+  background-position-x: center;
+  background-position-y: top;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  text-align: center;
+  margin-top: 70px;
+  color: white;
+  font-family: "CaslonGraD V2";
+}
+.background {
+  position: static;
+  height: 400px;
+}
+.background .page-intro h2 {
+  line-height: 50px;
+  font-size: 26px;
+}
+.background .page-intro p {
+  font-family: "merriweather", serif;
+  color: #bababa;
+  font-size: 16px;
+}
+.buttons {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.button {
+  margin: 4px;
+  font-family: "khand", serif;
+  width: 230px;
+  height: 86px;
+  border-style: solid;
+  border-color: #181b28;
+  border-radius: 5px;
+  background-color: #181b28;
+  cursor: pointer;
+  font-size: 22px;
+}
+.button span {
+  margin-left: 20px;
+  font-size: 30px;
+}
+.button:hover {
+  background-color: rgb(19, 21, 32);
+}
+.button a {
+  text-decoration: none;
+  color: white;
+}
+.button-d {
+  padding-bottom: 0px;
+  margin: 4px;
+  font-family: "khand", serif;
+  width: 150px;
+  height: 86px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 22px;
+  text-align: left;
+}
+.button-d:hover {
+  background-color: transparent;
+}
+.button-d a {
+  text-decoration: none;
+  color: white;
+  text-align: left;
+}
+.img2 {
+  position: relative;
+  right: 0px;
+  top: 0px;
+  margin-bottom: -40px;
+  cursor: pointer;
+  z-index: 1;
+}
+.march {
+  font-size: 10px;
+  line-height: 1px;
+}
+.free {
+  background-color: #9281ca;
+  width: 325px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #9281ca;
+  cursor: pointer;
+  margin-left: 2px;
+  color: black;
+}
+.free h4 {
+  font-family: "CaslonGraD V2";
+  font-size: 18px;
+  color: black;
+}
+.free p {
+  font-family: "merriweather";
+  font-size: 11px;
+  color: black;
+}
+.free1 h4 {
+  font-family: "CaslonGraD V2";
+  font-size: 18px;
+  color: black;
+}
+.free1 p {
+  font-family: "merriweather";
+  font-size: 11px;
+  color: black;
+}
+.free1 {
+  background-color: #6f4d98;
+  width: 350px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #6f4d98;
+  cursor: pointer;
+  margin-left: 3px;
+}
+.free a {
+  text-decoration: none;
+}
+.free a:visited {
+  text-decoration: none;
+  color: black;
+}
+.free1 a {
+  text-decoration: none;
+}
+.free1 a:visited {
+  text-decoration: none;
+  color: black;
+}
+.img {
+  float: left;
+}
+.horoscopes {
+  margin-top: 200px;
+}
+.opis {
+  font-family: "merriweather", serif;
+  color: #bababa;
+  font-size: 16px;
+}
+.button2 {
+  margin: 4px;
+  font-family: "khand", serif;
+  width: 300px;
+  height: 130px;
+  border-style: solid;
+  border-color: #181b28;
+  background-color: #181b28;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: "khand";
+  text-align: left;
+}
+.button2 a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  line-height: 1.13;
+}
+.wiecej {
+  font-size: 16px;
+  margin-left: 20px;
+  color: white;
+}
+.buttons-t {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  margin-right: 350px;
+}
+.button-t {
+  height: 180px;
+  float: left;
+  margin-left: 350px;
+  background: -moz-linear-gradient(
+    228deg,
+    #b000b2 8%,
+    #b000b2 8%,
+    #54097f 114%
+  );
+  background: -webkit-linear-gradient(
+    228deg,
+    #b000b2 8%,
+    #b000b2 8%,
+    #54097f 114%
+  );
+  background: linear-gradient(228deg, #b000b2 8%, #b000b2 8%, #54097f 114%);
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 10px;
+}
+.button-t a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "CaslonGraD V2";
+  font-size: 20px;
+  margin-top: 0px;
+  margin-left: 8px;
+}
+.buttons-c {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  margin-left: 340px;
+}
+.button-c {
+  height: 180px;
+  float: right;
+  margin-right: 365px;
+  background: -moz-linear-gradient(
+    228deg,
+    rgb(59, 87, 201) 8%,
+    rgb(59, 87, 201) 8%,
+    rgb(106, 130, 223) 114%
+  );
+  background: -webkit-linear-gradient(
+    228deg,
+    rgb(59, 87, 201) 8%,
+    rgb(59, 87, 201) 8%,
+    rgb(106, 130, 223) 114%
+  );
+  background: linear-gradient(
+    228deg,
+    rgb(59, 87, 201) 8%,
+    rgb(59, 87, 201) 8%,
+    rgb(106, 130, 223) 114%
+  );
+  cursor: pointer;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 10px;
+}
+.button-c a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "CaslonGraD V2";
+  font-size: 20px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+}
+.button-c .coming {
+  font-size: 10px;
+  font-family: "merriweather", serif;
+  color: #bababa;
+  margin-left: 80px;
+  margin-top: 5px;
+}
+.compatibility p {
+  font-family: "merriweather", serif;
+  color: #bababa;
+  font-size: 16px;
+}
+.buttons-c .button {
+  font-family: "khand", serif;
+  width: 218px;
+  height: 86px;
+  border-style: solid;
+  border-color: #181b28;
+  background-color: #181b28;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: "khand";
+  text-align: center;
+}
+.buttons-c .button a {
+  color: white;
+  text-decoration: none;
+  margin-left: 0px;
+  line-height: 1.13;
+  padding-top: 2px;
+}
+.membership {
+  background-image: url(banner.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 430px;
+  text-align: center;
+  margin: 4px;
+}
+.idk {
+  position: relative;
+  top: 65px;
+}
+.membership h2 {
+  font-size: 40px;
+}
+.membership p {
+  color: #bababa;
+  font-family: "merriweather", serif;
+  font-size: 14px;
+}
+.newsletter {
+  float: left;
+  display: inline;
+  margin-top: 20px;
+  height: 200px;
+}
+.newsletter {
+  font-size: 12px;
+  margin-left: 250px;
+}
+.form {
+  position: relative;
+  bottom: 90px;
+  left: 550px;
+}
+input::placeholder {
+  color: white;
+}
+.newsletter input {
+  border-color: #f6cc6d;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "khand";
+  height: 40px;
+  width: 174px;
+}
+.newsletter select {
+  border-color: #f6cc6d;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: "khand";
+  height: 40px;
+  width: 174px;
+}
+.container {
+  clear: both;
+  text-align: center;
+  list-style-type: none;
+  word-spacing: 15px;
+  height: 50px;
+}
+.fa-brands {
+  margin-right: 8px;
+}
+.moon {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#date-title {
+  color: white;
+  margin-right: 20px;
+}
+.sphere {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 0px;
+}
+.hemisphere {
+  width: 50%;
+  height: 100%;
+}
+
+.light {
+  background-color: #f4f6f0;
+}
+
+.dark {
+  background-color: #575851;
+}
+.divider,
+.divider:after {
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.divider {
+  background-color: #575851; /* Dark */
+}
+
+.divider:after {
+  content: "";
+  background-color: #f4f6f0; /* Light */
+  transform: rotateY(180deg);
+}
+footer {
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  margin-bottom: -20px;
+  height: 70px;
+  position: relative;
+}
+footer li {
+  position: relative;
+  left: 10px;
+  top: 18px;
+  text-align: center;
+}
