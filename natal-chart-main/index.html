@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Natal Chart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 style="padding: 2% 0; width:100%; font-family: oracul_decorative_regularRg; font-size: 5rem;
+           color: white;" class="text-center rounded">
+           Birth Chart Calculator
+          </h1>
+          
+          
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-5">
+          <form id="form">
+            <div class="form-row">
+              
+              <!-- Location and city -->
+              <div class="form-group col-md-6 ">
+                <label>Country</label>
+                
+                <select class="form-control"  onchange="getCities()" name="country" id="country" required>
+                  <option value=>--The Whole World--</option>
+                  <option value="AF">Afghanistan</option>                            
+                  <option value="AX">Aland Islands</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AS">American Samoa</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AO">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AQ">Antarctica</option>
+                  <option value="AG">Antigua And Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AM">Armenia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="AZ">Azerbaijan</option>
+                  <option value="BS">Bahamas</option>
+                  <option value="BH">Bahrain</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="BB">Barbados</option>
+                  <option value="BY">Belarus</option>
+                  <option value="BE">Belgium</option>
+                  <option value="BZ">Belize</option>
+                  <option value="BJ">Benin</option>
+                  <option value="BM">Bermuda</option>
+                  <option value="BT">Bhutan</option>
+                  <option value="BO">Bolivia</option>
+                  <option value="BA">Bosnia And Herzegovina</option>
+                  <option value="BW">Botswana</option>
+                  <option value="BV">Bouvet Island</option>
+                  <option value="BR">Brazil</option>
+                  <option value="IO">British Indian Ocean Territory</option>
+                  <option value="BN">Brunei Darussalam</option>
+                  <option value="BG">Bulgaria</option>
+                  <option value="BF">Burkina Faso</option>
+                  <option value="BI">Burundi</option>
+                  <option value="KH">Cambodia</option>
+                  <option value="CM">Cameroon</option>
+                  <option value="CA">Canada</option>
+                  <option value="CV">Cape Verde</option>
+                  <option value="KY">Cayman Islands</option>
+                  <option value="CF">Central African Republic</option>
+                  <option value="TD">Chad</option>
+                  <option value="CL">Chile</option>
+                  <option value="CN">China</option>
+                  <option value="CX">Christmas Island</option>
+                  <option value="CC">Cocos (Keeling) Islands</option>
+                  <option value="CO">Colombia</option>
+                  <option value="KM">Comoros</option>
+                  <option value="CG">Congo</option>
+                  <option value="CD">Congo, Democratic Republic</option>
+                  <option value="CK">Cook Islands</option>
+                  <option value="CR">Costa Rica</option>
+                  <option value="CI">Cote D\'Ivoire</option>
+                  <option value="HR">Croatia</option>
+                  <option value="CU">Cuba</option>
+                  <option value="CY">Cyprus</option>
+                  <option value="CZ">Czech Republic</option>
+                  <option value="DK">Denmark</option>
+                  <option value="DJ">Djibouti</option>
+                  <option value="DM">Dominica</option>
+                  <option value="DO">Dominican Republic</option>
+                  <option value="EC">Ecuador</option>
+                  <option value="EG">Egypt</option>
+                  <option value="SV">El Salvador</option>
+                  <option value="GQ">Equatorial Guinea</option>
+                  <option value="ER">Eritrea</option>
+                  <option value="EE">Estonia</option>
+                  <option value="ET">Ethiopia</option>
+                  <option value="FK">Falkland Islands (Malvinas)</option>
+                  <option value="FO">Faroe Islands</option>
+                  <option value="FJ">Fiji</option>
+                  <option value="FI">Finland</option>
+                  <option value="FR">France</option>
+                  <option value="GF">French Guiana</option>
+                  <option value="PF">French Polynesia</option>
+                  <option value="TF">French Southern Territories</option>
+                  <option value="GA">Gabon</option>
+                  <option value="GM">Gambia</option>
+                  <option value="GE">Georgia</option>
+                  <option value="DE">Germany</option>
+                  <option value="GH">Ghana</option>
+                  <option value="GI">Gibraltar</option>
+                  <option value="GR">Greece</option>
+                  <option value="GL">Greenland</option>
+                  <option value="GD">Grenada</option>
+                  <option value="GP">Guadeloupe</option>
+                  <option value="GU">Guam</option>
+                  <option value="GT">Guatemala</option>
+                  <option value="GG">Guernsey</option>
+                  <option value="GN">Guinea</option>
+                  <option value="GW">Guinea-Bissau</option>
+                  <option value="GY">Guyana</option>
+                  <option value="HT">Haiti</option>
+                  <option value="HM">Heard Island & Mcdonald Islands</option>
+                  <option value="VA">Holy See (Vatican City State)</option>
+                  <option value="HN">Honduras</option>
+                  <option value="HK">Hong Kong</option>
+                  <option value="HU">Hungary</option>
+                  <option value="IS">Iceland</option>
+                  <option value="IN">India</option>
+                  <option value="ID">Indonesia</option>
+                  <option value="IR">Iran, Islamic Republic Of</option>
+                  <option value="IQ">Iraq</option>
+                  <option value="IE">Ireland</option>
+                  <option value="IM">Isle Of Man</option>
+                  <option value="IL">Israel</option>
+                  <option value="IT">Italy</option>
+                  <option value="JM">Jamaica</option>
+                  <option value="JP">Japan</option>
+                  <option value="JE">Jersey</option>
+                  <option value="JO">Jordan</option>
+                  <option value="KZ">Kazakhstan</option>
+                  <option value="KE">Kenya</option>
+                  <option value="KI">Kiribati</option>
+                  <option value="KR">Korea</option>
+                  <option value="KW">Kuwait</option>
+                  <option value="KG">Kyrgyzstan</option>
+                  <option value="LA">Lao People\'s Democratic Republic</option>
+                  <option value="LV">Latvia</option>
+                  <option value="LB">Lebanon</option>
+                  <option value="LS">Lesotho</option>
+                  <option value="LR">Liberia</option>
+                  <option value="LY">Libyan Arab Jamahiriya</option>
+                  <option value="LI">Liechtenstein</option>
+                  <option value="LT">Lithuania</option>
+                  <option value="LU">Luxembourg</option>
+                  <option value="MO">Macao</option>
+                  <option value="MK">Macedonia</option>
+                  <option value="MG">Madagascar</option>
+                  <option value="MW">Malawi</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="MV">Maldives</option>
+                  <option value="ML">Mali</option>
+                  <option value="MT">Malta</option>
+                  <option value="MH">Marshall Islands</option>
+                  <option value="MQ">Martinique</option>
+                  <option value="MR">Mauritania</option>
+                  <option value="MU">Mauritius</option>
+                  <option value="YT">Mayotte</option>
+                  <option value="MX">Mexico</option>
+                  <option value="FM">Micronesia, Federated States Of</option>
+                  <option value="MD">Moldova</option>
+                  <option value="MC">Monaco</option>
+                  <option value="MN">Mongolia</option>
+                  <option value="ME">Montenegro</option>
+                  <option value="MS">Montserrat</option>
+                  <option value="MA">Morocco</option>
+                  <option value="MZ">Mozambique</option>
+                  <option value="MM">Myanmar</option>
+                  <option value="NA">Namibia</option>
+                  <option value="NR">Nauru</option>
+                  <option value="NP">Nepal</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="AN">Netherlands Antilles</option>
+                  <option value="NC">New Caledonia</option>
+                  <option value="NZ">New Zealand</option>
+                  <option value="NI">Nicaragua</option>
+                  <option value="NE">Niger</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="NU">Niue</option>
+                  <option value="NF">Norfolk Island</option>
+                  <option value="MP">Northern Mariana Islands</option>
+                  <option value="NO">Norway</option>
+                  <option value="OM">Oman</option>
+                  <option value="PK">Pakistan</option>
+                  <option value="PW">Palau</option>
+                  <option value="PS">Palestinian Territory, Occupied</option>
+                  <option value="PA">Panama</option>
+                  <option value="PG">Papua New Guinea</option>
+                  <option value="PY">Paraguay</option>
+                  <option value="PE">Peru</option>
+                  <option value="PH">Philippines</option>
+                  <option value="PN">Pitcairn</option>
+                  <option value="PL">Poland</option>
+                  <option value="PT">Portugal</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="QA">Qatar</option>
+                  <option value="RE">Reunion</option>
+                  <option value="RO">Romania</option>
+                  <option value="RU">Russian Federation</option>
+                  <option value="RW">Rwanda</option>
+                  <option value="BL">Saint Barthelemy</option>
+                  <option value="SH">Saint Helena</option>
+                  <option value="KN">Saint Kitts And Nevis</option>
+                  <option value="LC">Saint Lucia</option>
+                  <option value="MF">Saint Martin</option>
+                  <option value="PM">Saint Pierre And Miquelon</option>
+                  <option value="VC">Saint Vincent And Grenadines</option>
+                  <option value="WS">Samoa</option>
+                  <option value="SM">San Marino</option>
+                  <option value="ST">Sao Tome And Principe</option>
+                  <option value="SA">Saudi Arabia</option>
+                  <option value="SN">Senegal</option>
+                  <option value="RS">Serbia</option>
+                  <option value="SC">Seychelles</option>
+                  <option value="SL">Sierra Leone</option>
+                  <option value="SG">Singapore</option>
+                  <option value="SK">Slovakia</option>
+                  <option value="SI">Slovenia</option>
+                  <option value="SB">Solomon Islands</option>
+                  <option value="SO">Somalia</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="GS">South Georgia And Sandwich Isl.</option>
+                  <option value="ES">Spain</option>
+                  <option value="LK">Sri Lanka</option>
+                  <option value="SD">Sudan</option>
+                  <option value="SR">Suriname</option>
+                  <option value="SJ">Svalbard And Jan Mayen</option>
+                  <option value="SZ">Swaziland</option>
+                  <option value="SE">Sweden</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="SY">Syrian Arab Republic</option>
+                  <option value="TW">Taiwan</option>
+                  <option value="TJ">Tajikistan</option>
+                  <option value="TZ">Tanzania</option>
+                  <option value="TH">Thailand</option>
+                  <option value="TL">Timor-Leste</option>
+                  <option value="TG">Togo</option>
+                  <option value="TK">Tokelau</option>
+                  <option value="TO">Tonga</option>
+                  <option value="TT">Trinidad And Tobago</option>
+                  <option value="TN">Tunisia</option>
+                  <option value="TR">Turkey</option>
+                  <option value="TM">Turkmenistan</option>
+                  <option value="TC">Turks And Caicos Islands</option>
+                  <option value="TV">Tuvalu</option>
+                  <option value="UG">Uganda</option>
+                  <option value="UA">Ukraine</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="US">United States</option>
+                  <option value="UM">United States Outlying Islands</option>
+                  <option value="UY">Uruguay</option>
+                  <option value="UZ">Uzbekistan</option>
+                  <option value="VU">Vanuatu</option>
+                  <option value="VE">Venezuela</option>
+                  <option value="VN">Viet Nam</option>
+                  <option value="VG">Virgin Islands, British</option>
+                  <option value="VI">Virgin Islands, U.S.</option>
+                  <option value="WF">Wallis And Futuna</option>
+                  <option value="EH">Western Sahara</option>
+                  <option value="YE">Yemen</option>
+                  <option value="ZM">Zambia</option>
+                  <option value="ZW">Zimbabwe</option> 
+                </select>
+                  
+              </div>
+              <div class="form-group col-md-6">
+                <label>City</label>
+                <input name="city" class="form-control" placeholder="--Select City--" type="text" onchange="getLocation()" list="citylist" id="city" required/>
+                <datalist name="citylist" id="citylist">
+   
+                  </datalist>
+              </div>
+              <!-- Longitude and Latitude -->
+              <div class="form-group col-md-6 ">
+                <label>Latitude</label>
+                <input class="form-control" id="latitude" name="latitude" type="number" step="any" min="-90" max="90" value="0" readonly></input>
+              </div>
+              <div class="form-group col-md-6 ">
+                <label>Longitude</label>
+                <input class="form-control" id="longitude" name="longitude" type="number" step="any" min="-180" max="180" value="0" readonly></input>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Date of birth</label>
+              <input class="form-control" id="date" name="date" type="date" value="2000-02-03"></input>
+            </div>
+            <div class="form-group">
+              <label>Local Time of birth</label>
+              <input class="form-control" id="time" name="time" type="time" value="03:02:00"></input>
+            </div>
+
+
+
+            <div class="row">
+              
+              <div>
+                <!-- invisible -->
+                <div class="form-group invisible" style="position:absolute;">
+                  <label>Aspect Orbs:</label>
+                  <div class="row">
+                    <div class="col-6">
+                      <label>Major Aspects</label>
+                      <div id="major-aspect-inputs">
+
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <label>Minor Aspects</label>
+                      <div id="minor-aspect-inputs">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group ">
+                  <label class="col-5" >Language:</label>
+                  <select class="col-6 " id="language-select"></select>
+                </div>
+                <div class="form-group">
+                  <label class="col-5" >Zodiac System:</label>
+                  <select class="col-6" id="zodiacSystem"></select>
+                </div>
+                <div class="form-group">
+                  <label class="col-5">House System:</label>
+                  <select class="col-6" id="houseSystem"></select>
+                </div>
+                
+                <div class="form-group row ">
+                  <label class="col-4">Aspect Levels:</label>
+                  <div class="col-8">
+                    <label for ="aspect-level-major">
+                      Major
+                      <input id="aspect-level-major" type="checkbox" checked>
+                    </label>
+                    <label for="aspect-level-minor">
+                      Minor
+                      <input id="aspect-level-minor" type="checkbox">
+                    </label>
+                    <button style="margin-left: 5%;" type="submit" class="btn btn-dark">Generate Chart</button>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            
+          </form>
+        </div>
+        <div class="col-md-5" id="chart"></div>
+      </div>
+      
+
+      </div>
+      <hr />
+      <div class="container">
+        <div class="col-12">
+          <div class="form-group">
+            <h1 style="font-family: oracul_decorative_regularRg">Sun sign:</h1>
+            <h2 id="sunsign">
+
+            </h2>
+          </div>
+
+<!-- Data shown in tabular form -->
+
+          <div class="form-group">
+            <h3 style="font-family: oracul_decorative_regularRg">Angles: </h3>
+            <table id="angles" class="table table-striped table-responsive-sm">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>ascendant</th>
+                  <th>m.c.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Horizon Degrees
+                  </td>
+                  <td id="ascendant-a"></td>
+                  <td id="midheaven-a"></td>
+                </tr>
+                <tr>
+                  <td>
+                    Ecliptic Degrees
+                  </td>
+                  <td id="ascendant-b"></td>
+                  <td id="midheaven-b"></td>
+                </tr>
+                <tr>
+                  <td>
+                    Sign - D/M/S
+                  </td>
+                  <td id="ascendant-c"></td>
+                  <td id="midheaven-c"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr/>
+
+          <div class="form-group">
+            <h3>Zodiac Cusps:</h3>
+            <table id="zodiacCusps" class="table table-striped table-responsive-xl">
+              <thead>
+                <tr>
+                  <th>
+
+                  </th>
+                  <th>
+                    Aries
+                  </th>
+                  <th>
+                    Taurus
+                  </th>
+                  <th>
+                    Gemini
+                  </th>
+                  <th>
+                    Cancer
+                  </th>
+                  <th>
+                    Leo
+                  </th>
+                  <th>
+                    Virgo
+                  </th>
+                  <th>
+                    Libra
+                  </th>
+                  <th>
+                    Scorpio
+                  </th>
+                  <th>
+                    Sagittarius
+                  </th>
+                  <th>
+                    Capricorn
+                  </th>
+                  <th>
+                    Aquarius
+                  </th>
+                  <th>
+                    Pisces
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Horizon Degrees
+                  </td>
+                  <td id="zodiac-1">
+
+                  </td>
+                  <td id="zodiac-2">
+
+                  </td>
+                  <td id="zodiac-3">
+
+                  </td>
+                  <td id="zodiac-4">
+
+                  </td>
+                  <td id="zodiac-5">
+
+                  </td>
+                  <td id="zodiac-6">
+
+                  </td>
+                  <td id="zodiac-7">
+
+                  </td>
+                  <td id="zodiac-8">
+
+                  </td>
+                  <td id="zodiac-9">
+
+                  </td>
+                  <td id="zodiac-10">
+
+                  </td>
+                  <td id="zodiac-11">
+
+                  </td>
+                  <td id="zodiac-12">
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Ecliptic Degrees
+                  </td>
+                  <td id="zodiac-1b">
+
+                  </td>
+                  <td id="zodiac-2b">
+
+                  </td>
+                  <td id="zodiac-3b">
+
+                  </td>
+                  <td id="zodiac-4b">
+
+                  </td>
+                  <td id="zodiac-5b">
+
+                  </td>
+                  <td id="zodiac-6b">
+
+                  </td>
+                  <td id="zodiac-7b">
+
+                  </td>
+                  <td id="zodiac-8b">
+
+                  </td>
+                  <td id="zodiac-9b">
+
+                  </td>
+                  <td id="zodiac-10b">
+
+                  </td>
+                  <td id="zodiac-11b">
+
+                  </td>
+                  <td id="zodiac-12b">
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr />
+          <div class="form-group">
+            <h3>Houses:</h3>
+            <table id="houses" class="table table-striped table-responsive-xl">
+              <thead>
+                <tr>
+                  <th>
+
+                  </th>
+                  <th>
+                    House 1
+                  </th>
+                  <th>
+                    House 2
+                  </th>
+                  <th>
+                    House 3
+                  </th>
+                  <th>
+                    House 4
+                  </th>
+                  <th>
+                    House 5
+                  </th>
+                  <th>
+                    House 6
+                  </th>
+                  <th>
+                    House 7
+                  </th>
+                  <th>
+                    House 8
+                  </th>
+                  <th>
+                    House 9
+                  </th>
+                  <th>
+                    House 10
+                  </th>
+                  <th>
+                    House 11
+                  </th>
+                  <th>
+                    House 12
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Horizon Degrees
+                  </td>
+                  <td id="house-1a">
+
+                  </td>
+                  <td id="house-2a">
+
+                  </td>
+                  <td id="house-3a">
+
+                  </td>
+                  <td id="house-4a">
+
+                  </td>
+                  <td id="house-5a">
+
+                  </td>
+                  <td id="house-6a">
+
+                  </td>
+                  <td id="house-7a">
+
+                  </td>
+                  <td id="house-8a">
+
+                  </td>
+                  <td id="house-9a">
+
+                  </td>
+                  <td id="house-10a">
+
+                  </td>
+                  <td id="house-11a">
+
+                  </td>
+                  <td id="house-12a">
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Ecliptic Degrees
+                  </td>
+                  <td id="house-1b">
+
+                  </td>
+                  <td id="house-2b">
+
+                  </td>
+                  <td id="house-3b">
+
+                  </td>
+                  <td id="house-4b">
+
+                  </td>
+                  <td id="house-5b">
+
+                  </td>
+                  <td id="house-6b">
+
+                  </td>
+                  <td id="house-7b">
+
+                  </td>
+                  <td id="house-8b">
+
+                  </td>
+                  <td id="house-9b">
+
+                  </td>
+                  <td id="house-10b">
+
+                  </td>
+                  <td id="house-11b">
+
+                  </td>
+                  <td id="house-12b">
+
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sign
+                  </td>
+                  <td id="house-1-sign">
+
+                  </td>
+                  <td id="house-2-sign">
+
+                  </td>
+                  <td id="house-3-sign">
+
+                  </td>
+                  <td id="house-4-sign">
+
+                  </td>
+                  <td id="house-5-sign">
+
+                  </td>
+                  <td id="house-6-sign">
+
+                  </td>
+                  <td id="house-7-sign">
+
+                  </td>
+                  <td id="house-8-sign">
+
+                  </td>
+                  <td id="house-9-sign">
+
+                  </td>
+                  <td id="house-10-sign">
+
+                  </td>
+                  <td id="house-11-sign">
+
+                  </td>
+                  <td id="house-12-sign">
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <hr />
+            <div class="form-group">
+              <h3>Celestial Bodies:</h3>
+              <table id="bodies" class="table table-striped table-responsive-xl">
+                <thead>
+                  <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                      sun
+                    </th>
+                    <th>
+                      moon
+                    </th>
+                    <th>
+                      mercury
+                    </th>
+                    <th>
+                      venus
+                    </th>
+                    <th>
+                      mars
+                    </th>
+                    <th>
+                      jupiter
+                    </th>
+                    <th>
+                      saturn
+                    </th>
+                    <th>
+                      uranus
+                    </th>
+                    <th>
+                      neptune
+                    </th>
+                    <th>
+                      pluto
+                    </th>
+                    <th>
+                      chiron
+                    </th>
+                    <th>
+                      sirius
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Horizon Degrees
+                    </td>
+                    <td id="sun-a">
+
+                    </td>
+                    <td id="moon-a">
+
+                    </td>
+                    <td id="mercury-a">
+
+                    </td>
+                    <td id="venus-a">
+
+                    </td>
+                    <td id="mars-a">
+
+                    </td>
+                    <td id="jupiter-a">
+
+                    </td>
+                    <td id="saturn-a">
+
+                    </td>
+                    <td id="uranus-a">
+
+                    </td>
+                    <td id="neptune-a">
+
+                    </td>
+                    <td id="pluto-a">
+
+                    </td>
+                    <td id="chiron-a">
+
+                    </td>
+                    <td id="sirius-a">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Ecliptic Degrees
+                    </td>
+                    <td id="sun-b">
+
+                    </td>
+                    <td id="moon-b">
+
+                    </td>
+                    <td id="mercury-b">
+
+                    </td>
+                    <td id="venus-b">
+
+                    </td>
+                    <td id="mars-b">
+
+                    </td>
+                    <td id="jupiter-b">
+
+                    </td>
+                    <td id="saturn-b">
+
+                    </td>
+                    <td id="uranus-b">
+
+                    </td>
+                    <td id="neptune-b">
+
+                    </td>
+                    <td id="pluto-b">
+
+                    </td>
+                    <td id="chiron-b">
+
+                    </td>
+                    <td id="sirius-b">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Sign - D/M/S
+                    </td>
+                    <td id="sun-dms">
+
+                    </td>
+                    <td id="moon-dms">
+
+                    </td>
+                    <td id="mercury-dms">
+
+                    </td>
+                    <td id="venus-dms">
+
+                    </td>
+                    <td id="mars-dms">
+
+                    </td>
+                    <td id="jupiter-dms">
+
+                    </td>
+                    <td id="saturn-dms">
+
+                    </td>
+                    <td id="uranus-dms">
+
+                    </td>
+                    <td id="neptune-dms">
+
+                    </td>
+                    <td id="pluto-dms">
+
+                    </td>
+                    <td id="chiron-dms">
+
+                    </td>
+                    <td id="sirius-dms">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Retrograde
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    <td id="mercury-retro">
+
+                    </td>
+                    <td id="venus-retro">
+
+                    </td>
+                    <td id="mars-retro">
+
+                    </td>
+                    <td id="jupiter-retro">
+
+                    </td>
+                    <td id="saturn-retro">
+
+                    </td>
+                    <td id="uranus-retro">
+
+                    </td>
+                    <td id="neptune-retro">
+
+                    </td>
+                    <td id="pluto-retro">
+
+                    </td>
+                    <td id="chiron-retro">
+
+                    </td>
+                    <td>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      House
+                    </td>
+                    <td id="sun-house">
+
+                    </td>
+                    <td id="moon-house">
+
+                    </td>
+                    <td id="mercury-house">
+
+                    </td>
+                    <td id="venus-house">
+
+                    </td>
+                    <td id="mars-house">
+
+                    </td>
+                    <td id="jupiter-house">
+
+                    </td>
+                    <td id="saturn-house">
+
+                    </td>
+                    <td id="uranus-house">
+
+                    </td>
+                    <td id="neptune-house">
+
+                    </td>
+                    <td id="pluto-house">
+
+                    </td>
+                    <td id="chiron-house">
+
+                    </td>
+                    <td id="sirius-house">
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="form-group">
+              <h3>Celestial Points:</h3>
+              <table id="points" class="table table-striped table-responsive-sm">
+                <thead>
+                  <tr>
+                    <th>
+
+                    </th>
+                    <th>
+                      n. node
+                    </th>
+                    <th>
+                      s. node
+                    </th>
+                    <th>
+                      lilith
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Horizon Degrees
+                    </td>
+                    <td id="northnode-a">
+
+                    </td>
+                    <td id="southnode-a">
+
+                    </td>
+                    <td id="lilith-a">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Ecliptic Degrees
+                    </td>
+                    <td id="northnode-b">
+
+                    </td>
+                    <td id="southnode-b">
+
+                    </td>
+                    <td id="lilith-b">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Sign - D/M/S
+                    </td>
+                    <td id="northnode-dms">
+
+                    </td>
+                    <td id="southnode-dms">
+
+                    </td>
+                    <td id="lilith-dms">
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      House
+                    </td>
+                    <td id="northnode-house">
+
+                    </td>
+                    <td id="southnode-house">
+
+                    </td>
+                    <td id="lilith-house">
+
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+          <hr />
+          <div class="form-group">
+            <h3>Aspects:</h3>
+            <table id="aspects" class="table table-striped table-responsive-sm">
+              <thead class="text-white lasttable">
+                <tr>
+                  <td>
+                    Point 1
+                  </td>
+                  <td>
+                    Aspect
+                  </td>
+                  <td>
+                    Point 2
+                  </td>
+                  <td>
+                    Orb
+                  </td>
+                  <td>
+                    Orb Used
+                  </td>
+                  <td>
+                    Aspect Level
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="getLocations.js"></script>
+    <script type="text/javascript" src="app_uncompressed.js"></script>
+
+
+  </body>
+</html>

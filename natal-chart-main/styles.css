@@ -1,0 +1,78 @@
+@import url('https://db.onlinewebfonts.com/c/f47b014f3a597db475c47669fab024e0?family=CaslonGraD+V2');
+@import url('https://fonts.cdnfonts.com/css/storybook');
+@font-face {
+  font-family: 'oracul_decorative_regularRg';
+  src: url('oracul_decorative_regular-webfont.woff2') format('woff2'),
+       url('oracul_decorative_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+#chart-astrology-radix-signs-5,#chart-astrology-radix-signs-9,#chart-astrology-radix-signs-1{
+        
+    fill:#397c55;
+  }
+  #chart-astrology-radix-signs-7,#chart-astrology-radix-signs-11,#chart-astrology-radix-signs-3{
+   
+    fill:#2d6f89;
+  }
+  #chart-astrology-radix-signs-6,#chart-astrology-radix-signs-10,#chart-astrology-radix-signs-2{
+    
+    fill:#9e9e3a;
+  }
+  #chart-astrology-radix-signs-8,#chart-astrology-radix-signs-4,#chart-astrology-radix-signs-0{
+    
+    fill:#913737;
+  }
+  #chart-astrology-radix-planets-Jupiter +text,#chart-astrology-radix-planets-Sun+text,
+  #chart-astrology-radix-planets-Mars+text,#chart-astrology-radix-planets-Jupiter path,#chart-astrology-radix-planets-Sun path,
+  #chart-astrology-radix-planets-Mars path,  #chart-astrology-radix-planets-Sirius +text, #chart-astrology-radix-planets-Sirius path{
+    stroke: rgb(0, 0, 0);
+  }
+  #chart-astrology-radix-planets-Saturn+text,
+  #chart-astrology-radix-planets-Venus+text,#chart-astrology-radix-planets-Saturn path,
+  #chart-astrology-radix-planets-Venus path{
+    stroke: rgb(0, 0, 0);
+  }
+  #chart-astrology-radix-planets-Mercury+text,
+  #chart-astrology-radix-planets-Uranus+text,#chart-astrology-radix-planets-Mercury path,
+  #chart-astrology-radix-planets-Uranus path{
+    stroke: #000000;
+  }
+  #chart-astrology-radix-planets-Neptune+text,#chart-astrology-radix-planets-Moon+text,
+  #chart-astrology-radix-planets-Pluto+text,#chart-astrology-radix-planets-Neptune path,#chart-astrology-radix-planets-Moon path,
+  #chart-astrology-radix-planets-Pluto path{
+    stroke: rgb(0, 0, 0);
+  }
+  table{
+    background-color: #5252869d !important;
+    
+  }
+  body{
+    background-image: url(../background.png);
+    color: white;
+    font-family: 'oracul_decorative_regularRg';
+  }
+  .lasttable{
+    background-color: #030303 !important;
+    font-weight: 700;
+    font-family: 'oracul_decorative_regularRg';
+  }
+  td,th{
+    padding:0.1875rem 0.1875rem !important;
+    text-align: center;
+    color: white;
+    border: thin solid  #0303039f!important;
+    border-collapse: collapse;
+    font-family: 'oracul_decorative_regularRg';
+  }
+  thead{
+    background-color: #5252869d;
+     color: white;
+     font-family: 'oracul_decorative_regularRg';
+  }
+  h6 {
+    display: none;
+  }
+div {
+    overflow: unset;
+ }
